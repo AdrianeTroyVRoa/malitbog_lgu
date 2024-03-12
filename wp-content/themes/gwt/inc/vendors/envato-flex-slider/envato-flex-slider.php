@@ -22,12 +22,13 @@ function efs_get_slider(){
 	
 	global $post_id;
 	
+    $slider = '<div class="orbit" role="region" aria-label="Banner Slider" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+                <ul class="orbit-container">';		
+    
+    $count = 0;
+
 	if (have_posts()) : 	
 		
-		$slider = '<div class="orbit" role="region" aria-label="Banner Slider" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-					<ul class="orbit-container">';		
-		
-		$count = 0;
 		$x = 1;
 		while (have_posts()) : the_post();
 			$count++;
